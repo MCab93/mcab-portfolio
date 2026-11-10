@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MCAB
 
-## Getting Started
+Český prezentační web Martina Cabalky (MCAB), vývojáře webových a Android aplikací. Postavený v Reactu a TypeScriptu na Next.js App Router.
 
-First, run the development server:
+## Spuštění
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Pro produkční spuštění:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npm run start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Web poběží na `http://localhost:3000`. Příkaz `npm run start` spouštějte až po produkčním buildu.
 
-## Learn More
+## Kontroly a build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Next.js při buildu předgeneruje stránky pro rychlé načtení a SEO. Produkční server je možné lokálně spustit příkazem `npm run start`; pro Netlify se použije jeho automatický Next.js OpenNext adapter.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Nasazení na Netlify
 
-## Deploy on Vercel
+1. Pushněte repozitář do GitHubu, GitLabu nebo Bitbucketu.
+2. V Netlify zvolte **Add new site → Import an existing project**, připojte repozitář a potvrďte build příkaz `npm run build`.
+3. V nastavení domén webu přidejte `mcab.dev` a `www.mcab.dev`; jako primární doménu nastavte `mcab.dev`.
+4. U registrátora domény nastavte DNS záznamy, které Netlify zobrazí pro připojenou doménu. Případně přeneste DNS správu na Netlify.
+5. Po ověření DNS aktivujte HTTPS v Netlify. `public/_redirects` přesměruje `www.mcab.dev` na `mcab.dev`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Doménu je nutné nejprve vlastnit/registrovat. DNS záznamy se liší podle registrátora a konfigurace Netlify, proto je nekopírujte z obecných příkladů.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Před zveřejněním
+
+- Ověřte vlastnictví domény `mcab.dev` a nakonfigurujte ji podle instrukcí Netlify.
+- Ověřte kontaktní e-mail a případně doplňte profily či portfolio.
+- Ověřte texty, technologie a nabízené služby podle skutečné zkušenosti a nabídky.
+- Metadata, canonical URL a sitemapu obsluhuje `src/app/layout.tsx` a `src/app/sitemap.ts`.
+- Otestujte publikovanou verzi na mobilu, tabletu a desktopu.
+
+## Struktura
+
+- `src/app/page.tsx` — obsah stránky a navigace.
+- `src/app/ContactForm.tsx` — kontaktní formulář, který předvyplní e-mailovou aplikaci.
+- `src/app/sitemap.ts` — sitemap pro `mcab.dev`.
+- `netlify.toml` — build příkaz pro Netlify.
+- `public/_redirects` — přesměrování `www.mcab.dev` na primární doménu.
+- `src/app/varianty/page.tsx` — srovnání návrhů propojených služeb a barev na `/varianty`.
+- `src/app/globals.css` — design, responzivní pravidla, stavy a animace.
+- `src/app/layout.tsx` — jazyk dokumentu a metadata pro vyhledávání a sdílení.
+- `public/robots.txt` — základní pravidla pro crawlery.
+
+Hlavní web používá téměř černý základ s oranžovými akcenty. Návrhová stránka `/varianty` má vlastní oddělené barevné směry.
