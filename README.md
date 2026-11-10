@@ -40,7 +40,7 @@ Doménu je nutné nejprve vlastnit/registrovat. DNS záznamy se liší podle reg
 
 ### Kontaktní formulář
 
-Formulář používá Netlify Forms bez externích klíčů nebo e-mailové aplikace. V **Project → Forms → Form detection** zapněte rozpoznávání formulářů a nasaďte tuto verzi webu. Potom v **Project → Forms → Submission notifications** přidejte e-mail pro upozornění. Netlify může vyžadovat potvrzení adresy, která není členem týmu. Odeslání otestujte na nasazeném webu a ověřte, že se poptávka objeví v přehledu **Forms** a přijde upozornění.
+Formulář používá Netlify Forms bez externích klíčů nebo e-mailové aplikace. Soubor `public/__forms.html` zpřístupňuje formulář Netlify při buildu Next.js; klientský formulář odesílá na `/__forms.html`. V **Project → Forms → Form detection** zapněte rozpoznávání formulářů a nasaďte tuto verzi webu. Potom v **Project → Forms → Submission notifications** přidejte e-mail pro upozornění. Netlify může vyžadovat potvrzení adresy, která není členem týmu. Odeslání otestujte na nasazeném webu a ověřte, že se poptávka objeví v přehledu **Forms** a přijde upozornění.
 
 Lokálně formulář záměrně nehlásí úspěch: běžný Next.js server neumí poptávku uložit do Netlify Forms.
 

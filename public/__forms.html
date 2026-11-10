@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <title>Formulář</title>
+  </head>
+  <body>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      hidden
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <select name="topic">
+        <option value="Webové stránky nebo aplikace">Webové stránky nebo aplikace</option>
+        <option value="Android aplikace">Android aplikace</option>
+        <option value="Frontend vývoj">Frontend vývoj</option>
+        <option value="Jiné">Jiné</option>
+      </select>
+      <textarea name="message"></textarea>
+      <input name="bot-field" />
+    </form>
+  </body>
+</html>

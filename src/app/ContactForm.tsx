@@ -34,7 +34,7 @@ export default function ContactForm() {
     setSubmission({ status: "sending" });
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body,
@@ -61,9 +61,7 @@ export default function ContactForm() {
         className="contact-form"
         name="contact"
         method="POST"
-        action="/"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
+        action="/__forms.html"
         onSubmit={handleSubmit}
       >
         <input type="hidden" name="form-name" value="contact" />
