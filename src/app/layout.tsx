@@ -1,14 +1,27 @@
 import type { Metadata } from "next";
+import { Inter, Manrope } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const manrope = Manrope({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-manrope",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mcab.dev"),
-  title: "MCAB | Martin Cabalka — Web & Android Developer",
+  title: "Tvorba webů a Android aplikací | Martin Cabalka – MCAB",
   description:
-    "Martin Cabalka (MCAB) — vývoj webových a Android aplikací na míru. Čistý kód, efektivní řešení a přehled o průběhu projektu.",
+    "Vyvíjím firemní weby, webové aplikace a Android aplikace na míru. Přímá komunikace, srozumitelný postup a vývoj od návrhu po nasazení.",
   applicationName: "MCAB",
   alternates: {
-    canonical: "/",
+    canonical: "https://mcab.dev/",
   },
   robots: {
     index: true,
@@ -19,21 +32,21 @@ export const metadata: Metadata = {
     locale: "cs_CZ",
     siteName: "MCAB",
     url: "/",
-    title: "MCAB | Martin Cabalka — Web & Android Developer",
+    title: "Tvorba webů a Android aplikací | Martin Cabalka – MCAB",
     description:
-      "Martin Cabalka (MCAB) — vývoj webových a Android aplikací na míru.",
+      "Firemní weby, webové systémy a Android aplikace na míru. Přímá komunikace od zadání po nasazení.",
   },
   twitter: {
     card: "summary",
-    title: "MCAB | Martin Cabalka — Web & Android Developer",
+    title: "Tvorba webů a Android aplikací | Martin Cabalka – MCAB",
     description:
-      "Martin Cabalka (MCAB) — vývoj webových a Android aplikací na míru.",
+      "Firemní weby, webové systémy a Android aplikace na míru. Přímá komunikace od zadání po nasazení.",
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="cs">
+    <html lang="cs" className={`${inter.variable} ${manrope.variable}`}>
       <body>{children}</body>
     </html>
   );

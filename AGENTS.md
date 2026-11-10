@@ -7,7 +7,7 @@ Prezentační web nezávislého vývojáře pro získávání zakázek na webov�
 - Next.js App Router, React, TypeScript, CSS.
 - Produkční server Next.js; stránka se při buildu předgeneruje do HTML.
 - `src/app/page.tsx`: obsah úvodní stránky.
-- `src/app/ContactForm.tsx`: kontaktní formulář, který připraví zprávu v e-mailové aplikaci.
+- `src/app/ContactForm.tsx`: přístupný kontaktní formulář odesílaný přes Netlify Forms.
 - `src/app/globals.css`: responzivní styly a animace.
 - `src/app/layout.tsx`: jazyk a metadata.
 - `src/app/sitemap.ts`: sitemap pro produkční doménu `mcab.dev`.
@@ -27,10 +27,11 @@ Prezentační web nezávislého vývojáře pro získávání zakázek na webov�
 ## Pravidla projektu
 
 - Zachovej český obsah, responzivní rozvržení, přístupnost a respekt k `prefers-reduced-motion`.
-- Zachovej značku MCAB (Martin Cabalka · Developer) a vizuální směr hlavního webu: téměř černý základ, bílou typografii a oranžové akcenty.
+- Zachovej značku MCAB (Martin Cabalka) a vizuální směr hlavního webu: téměř černý základ, bílou typografii a oranžové akcenty.
 - `/varianty` je samostatná stránka pro porovnávání návrhů; její styly odděluj od hlavního webu.
 - Stránka může zůstat server-renderovaná bez klientského JavaScriptu, pokud interakce nevyžadují opak.
 - Před zveřejněním nastav doménu, canonical URL, sitemapu a sdílecí obrázek.
+- Pro příjem poptávek musí být v Netlify zapnuté rozpoznávání formulářů a nastavené e-mailové notifikace.
 - Nepřidávej smyšlené zkušenosti, reference, výsledky ani metriky.
 
 <!-- BEGIN:nextjs-agent-rules -->

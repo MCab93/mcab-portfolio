@@ -1,8 +1,5 @@
 import ContactForm from "./ContactForm";
 
-const contactEmail = "martin.cabalka@gmail.com";
-const contactHref = `mailto:${contactEmail}?subject=Popt%C3%A1vka%20webu%20nebo%20aplikace`;
-
 function ArrowIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
@@ -13,48 +10,6 @@ function ArrowIcon() {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-    </svg>
-  );
-}
-
-function BoltIcon() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 36 36" fill="none">
-      <path
-        d="m20 2-13 18h10l-1 14 13-20H19l1-12Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function LayersIcon() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 36 36" fill="none">
-      <path
-        d="m18 3 15 8-15 8L3 11l15-8Zm-15 14 15 8 15-8M3 25l15 8 15-8"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function ChatIcon() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 36 36" fill="none">
-      <path
-        d="M8 6h20a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4h-9l-8 6v-6a5 5 0 0 1-7-4V10a4 4 0 0 1 4-4Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
-      />
-      <circle cx="12" cy="16.5" r="1.5" fill="currentColor" />
-      <circle cx="18" cy="16.5" r="1.5" fill="currentColor" />
-      <circle cx="24" cy="16.5" r="1.5" fill="currentColor" />
     </svg>
   );
 }
@@ -100,6 +55,20 @@ function AndroidIcon() {
       />
       <circle cx="13" cy="12" r="1" fill="#111" />
       <circle cx="23" cy="12" r="1" fill="#111" />
+    </svg>
+  );
+}
+
+function CodeIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 36 36" fill="none">
+      <path
+        d="m13 10-8 8 8 8m10-16 8 8-8 8m-3-21-5 30"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
@@ -169,19 +138,59 @@ function HeroArtwork() {
             stroke="#37383a"
             strokeWidth="1.4"
           />
-          <path d="m177 241 235-29 54 28-292 45-45-10 48-34Z" fill="url(#laptop-base)" stroke="#d4914b" strokeWidth="1.6" />
-          <path d="m177 241-47 34 43 13 293-47-45-26" fill="#35251a" stroke="#a16b34" strokeWidth="1.4" />
-          <path d="m209 251 158-24 29 9-160 26-28-11Z" fill="#17181a" stroke="#9e7042" strokeWidth="1" />
+          <path
+            d="m177 241 235-29 54 28-292 45-45-10 48-34Z"
+            fill="url(#laptop-base)"
+            stroke="#d4914b"
+            strokeWidth="1.6"
+          />
+          <path
+            d="m177 241-47 34 43 13 293-47-45-26"
+            fill="#35251a"
+            stroke="#a16b34"
+            strokeWidth="1.4"
+          />
+          <path
+            d="m209 251 158-24 29 9-160 26-28-11Z"
+            fill="#17181a"
+            stroke="#9e7042"
+            strokeWidth="1"
+          />
           <path d="m216 254 166-24" stroke="#ff9d24" strokeOpacity=".44" strokeWidth="1" />
           <path d="m206 77 218-43" stroke="#ff9c22" strokeWidth="1.5" />
           <path d="m189 103 220-39" stroke="#6b6d70" strokeWidth="1" />
-          <path d="m181 118 42-8m12-2 82-15m-136 37 19-4m15-3 48-9m-85 30 36-7m14-3 69-13m-123 39 22-4m14-3 58-11m-100 31 41-8m14-3 73-14m-133 36 29-5m13-3 67-13" stroke="#f08c22" strokeWidth="2" strokeLinecap="round" />
-          <path d="m340 77 57-11m-68 23 62-12m-64 23 61-12m-67 24 61-12m-67 24 60-12m-70 25 61-12m-67 24 59-12m-68 24 58-11" stroke="#bac1c8" strokeOpacity=".58" strokeWidth="1.7" strokeLinecap="round" />
-          <path d="m173 226 240-30" stroke="#ff9d25" strokeWidth="2.2" filter="url(#orange-glow)" />
+          <path
+            d="m181 118 42-8m12-2 82-15m-136 37 19-4m15-3 48-9m-85 30 36-7m14-3 69-13m-123 39 22-4m14-3 58-11m-100 31 41-8m14-3 73-14m-133 36 29-5m13-3 67-13"
+            stroke="#f08c22"
+            strokeWidth="2"
+            strokeLinecap="round"
+          />
+          <path
+            d="m340 77 57-11m-68 23 62-12m-64 23 61-12m-67 24 61-12m-67 24 60-12m-70 25 61-12m-67 24 59-12m-68 24 58-11"
+            stroke="#bac1c8"
+            strokeOpacity=".58"
+            strokeWidth="1.7"
+            strokeLinecap="round"
+          />
+          <path
+            d="m173 226 240-30"
+            stroke="#ff9d25"
+            strokeWidth="2.2"
+            filter="url(#orange-glow)"
+          />
         </g>
 
         <g className="phone" transform="rotate(9 477 246)">
-          <rect x="432" y="144" width="104" height="174" rx="16" fill="#050607" stroke="#b87735" strokeWidth="2" />
+          <rect
+            x="432"
+            y="144"
+            width="104"
+            height="174"
+            rx="16"
+            fill="#050607"
+            stroke="#b87735"
+            strokeWidth="2"
+          />
           <rect x="439" y="153" width="90" height="155" rx="11" fill="url(#phone-screen)" />
           <rect x="468" y="158" width="32" height="3" rx="1.5" fill="#444448" />
           <g transform="translate(458 190) scale(1.3)" fill="#ff9c0a">
@@ -205,22 +214,35 @@ function HeroArtwork() {
   );
 }
 
-const benefits = [
+const services = [
   {
-    title: "Rychlá realizace",
-    description: "Držím tempo a dodávám věci.",
-    icon: <BoltIcon />,
+    number: "01",
+    title: "Webové stránky a aplikace",
+    description:
+      "Firemní web, zákaznický portál nebo interní systém, který pomůže zákazníkům i vašemu týmu. Navážu také na řešení, které už používáte.",
+    icon: <LaptopIcon />,
   },
   {
-    title: "Efektivní řešení",
-    description: "Čistý, udržitelný a funkční kód.",
-    icon: <LayersIcon />,
+    number: "02",
+    title: "Android aplikace",
+    description:
+      "Mobilní aplikace na míru i rozvoj té stávající. Promyslíme, jak má fungovat a s jakými službami se má propojit.",
+    icon: <AndroidIcon />,
   },
   {
-    title: "Sledování projektu v reálném čase",
-    description: "Na dashboardu vidíte postup prací i další kroky.",
-    icon: <ChatIcon />,
+    number: "03",
+    title: "Frontend vývoj a kódování",
+    description:
+      "Převedu návrh z Figmy do responzivního rozhraní, opravím konkrétní části webu nebo posílím váš vývojový tým.",
+    icon: <CodeIcon />,
   },
+];
+
+const collaborationSteps = [
+  "Probereme zadání a cíl projektu.",
+  "Navrhnu řešení, rozsah a odhad ceny.",
+  "Projekt postupně vyvíjím a průběžně sdílím, jak práce pokračují.",
+  "Společně otestujeme, nasadíme a předáme výsledek.",
 ];
 
 export default function Home() {
@@ -231,124 +253,128 @@ export default function Home() {
       </a>
 
       <header className="site-header">
-        <a className="brand" href="#domu" aria-label="MCAB — Martin Cabalka, úvodní stránka">
+        <a className="brand" href="#domu" aria-label="MCAB, Martin Cabalka">
           <span className="brand-mark" aria-hidden="true">
             MC
           </span>
           <span className="brand-lockup">
             <strong>MCAB</strong>
-            <small>Martin Cabalka · Developer</small>
+            <small>Martin Cabalka</small>
           </span>
         </a>
 
         <nav className="main-nav" aria-label="Hlavní navigace">
-          <a href="#domu">Domů</a>
-          <a href="#o-mne">O mně</a>
           <a href="#sluzby">Služby</a>
+          <a href="#o-mne">O mně</a>
+          <a href="#spoluprace">Jak spolupracuji</a>
           <a href="#kontakt">Kontakt</a>
         </nav>
 
-        <a className="header-cta" href={contactHref}>
-          Napište mi <ArrowIcon />
+        <a className="header-cta" href="#kontakt">
+          Poptat projekt <ArrowIcon />
         </a>
       </header>
 
       <main id="obsah">
         <section className="hero section-shell" id="domu" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">MARTIN CABALKA · WEB · ANDROID · KÓD</p>
-            <h1 id="hero-title">
-              Web &amp; Android
-              <br />
-              Developer
-              <br />
-              <span>Kóder</span>
-            </h1>
+            <p className="eyebrow">VÝVOJ WEBŮ A APLIKACÍ NA MÍRU</p>
+            <h1 id="hero-title">Weby a aplikace, které dávají smysl.</h1>
             <p className="hero-description">
-              Tvořím moderní webové a Android aplikace na míru. Spolehlivě,
-              rychle a efektivně.
+              Tvořím firemní weby, webové systémy a Android aplikace. Pomohu od zadání a návrhu
+              až po vývoj a nasazení. Jednáte přímo se mnou.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#kontakt">
-                Zadat projekt <ArrowIcon />
+                Nezávazně poptat projekt <ArrowIcon />
               </a>
-              <a className="button button-outline" href="#o-mne">
-                O mně
+              <a className="button button-outline" href="#sluzby">
+                Moje služby
               </a>
             </div>
           </div>
           <HeroArtwork />
         </section>
 
-        <section className="benefits section-shell" aria-label="Výhody spolupráce">
-          {benefits.map((benefit) => (
-            <article className="benefit" key={benefit.title}>
-              <span className="benefit-icon">{benefit.icon}</span>
-              <div>
-                <h2>{benefit.title}</h2>
-                <p>{benefit.description}</p>
-              </div>
-            </article>
-          ))}
+        <section className="trust-points section-shell" aria-label="Výhody spolupráce">
+          <p>Přímá komunikace</p>
+          <p>Jasný postup od zadání po nasazení</p>
+          <p>Pomoc s celým projektem i jeho částí</p>
         </section>
 
-        <section className="details section-shell" aria-label="O mně, služby a kontakt">
-          <article className="about-panel" id="o-mne">
-            <p className="section-kicker">PÁR SLOV O MNĚ</p>
-            <h2>O mně</h2>
+        <section className="services section-shell" id="sluzby" aria-labelledby="services-title">
+          <div className="section-heading">
+            <p className="section-kicker">S ČÍM VÁM MOHU POMOCI</p>
+            <h2 id="services-title">Řešení podle toho, co váš projekt potřebuje.</h2>
+          </div>
+          <div className="services-list">
+            {services.map((service) => (
+              <article className="service-item" key={service.number}>
+                <span className="service-number">{service.number}</span>
+                <span className="service-icon">{service.icon}</span>
+                <div className="service-copy">
+                  <h3>{service.title}</h3>
+                  <p>{service.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="about-process section-shell" aria-label="O mně a průběhu spolupráce">
+          <article className="about-panel" id="o-mne" aria-labelledby="about-title">
+            <p className="section-kicker">OSOBNÍ PŘÍSTUP, PŘÍMÁ KOMUNIKACE</p>
+            <h2 id="about-title">Jsem Martin. Pojďme váš nápad proměnit ve funkční řešení.</h2>
             <p>
-              Zaměřuji se na tvorbu webových a Android aplikací. Baví mě hledat
-              chytrá řešení, psát čistý kód a převádět nápady do funkčních
-              aplikací.
+              Jmenuji se Martin Cabalka. Kromě samotného vývoje pomáhám ujasnit zadání, navrhnout
+              řešení a dotáhnout projekt do nasazení. Zakládám si na přímé komunikaci, přehledném
+              postupu a kvalitně odvedené práci.
+            </p>
+            <p>
+              Můžeme spolupracovat na celém projektu nebo jen na jeho části — třeba jako posila
+              vašeho interního týmu či agentury.
             </p>
           </article>
 
-          <div className="services-panel" id="sluzby">
-            <p className="section-kicker">CO PRO VÁS VYVÍJÍM</p>
-            <article className="service-item">
-              <span className="service-icon">
-                <LaptopIcon />
-              </span>
-              <div>
-                <h2>Webové aplikace</h2>
-                <p>Moderní, rychlé a responzivní weby.</p>
-              </div>
-            </article>
-            <article className="service-item">
-              <span className="service-icon android-service-icon">
-                <AndroidIcon />
-              </span>
-              <div>
-                <h2>Android aplikace</h2>
-                <p>Aplikace navržené pro Android.</p>
-              </div>
-            </article>
-            <p className="backend-note">Node.js · API · Integrace</p>
-          </div>
-
-          <section className="contact-panel" id="kontakt" aria-labelledby="contact-title">
-            <p className="section-kicker">MÁTE NÁPAD?</p>
-            <h2 id="contact-title">Napište mi</h2>
-            <ContactForm email={contactEmail} />
-            <a className="contact-direct" href={contactHref}>
-              {contactEmail}
-            </a>
+          <section
+            className="process-panel"
+            id="spoluprace"
+            aria-labelledby="process-title"
+          >
+            <p className="section-kicker">OD PRVNÍHO ROZHOVORU PO NASAZENÍ</p>
+            <h2 id="process-title">Jak spolupráce probíhá</h2>
+            <ol className="process-list">
+              {collaborationSteps.map((step, index) => (
+                <li key={step}>
+                  <span className="process-number" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span>{step}</span>
+                </li>
+              ))}
+            </ol>
           </section>
+        </section>
+
+        <section className="contact section-shell" id="kontakt" aria-labelledby="contact-title">
+          <div className="contact-copy">
+            <p className="section-kicker">MÁTE NÁPAD NEBO POTŘEBUJETE POMOC?</p>
+            <h2 id="contact-title">Pojďme probrat váš projekt.</h2>
+            <p>
+              Napište mi pár slov o tom, co potřebujete. Ozvu se vám, abychom probrali další
+              postup.
+            </p>
+            <a className="contact-direct" href="mailto:martin.cabalka@gmail.com">
+              Nebo napište přímo na martin.cabalka@gmail.com
+            </a>
+          </div>
+          <ContactForm />
         </section>
       </main>
 
       <footer className="site-footer section-shell">
-        <a className="brand footer-brand" href="#domu">
-          <span className="brand-mark" aria-hidden="true">
-            MC
-          </span>
-          <span className="brand-lockup">
-            <strong>MCAB</strong>
-            <small>Martin Cabalka · Developer</small>
-          </span>
-        </a>
-        <p>Webové a Android aplikace s jasným cílem.</p>
-        <span className="footer-copy">© MCAB · Martin Cabalka</span>
+        <p>Weby a aplikace na míru · MCAB</p>
+        <span className="footer-copy">© {new Date().getFullYear()} Martin Cabalka</span>
       </footer>
     </>
   );

@@ -30,13 +30,19 @@ Next.js při buildu předgeneruje stránky pro rychlé načtení a SEO. Produkč
 
 ## Nasazení na Netlify
 
-1. Pushněte repozitář do GitHubu, GitLabu nebo Bitbucketu.
-2. V Netlify zvolte **Add new site → Import an existing project**, připojte repozitář a potvrďte build příkaz `npm run build`.
+1. Pushněte změny do připojeného repozitáře `MCab93/mcab-portfolio`; Netlify automaticky spustí nové nasazení z větve `master`.
+2. Projekt používá Next.js Runtime od Netlify a build příkaz `npm run build`.
 3. V nastavení domén webu přidejte `mcab.dev` a `www.mcab.dev`; jako primární doménu nastavte `mcab.dev`.
 4. U registrátora domény nastavte DNS záznamy, které Netlify zobrazí pro připojenou doménu. Případně přeneste DNS správu na Netlify.
 5. Po ověření DNS aktivujte HTTPS v Netlify. `public/_redirects` přesměruje `www.mcab.dev` na `mcab.dev`.
 
 Doménu je nutné nejprve vlastnit/registrovat. DNS záznamy se liší podle registrátora a konfigurace Netlify, proto je nekopírujte z obecných příkladů.
+
+### Kontaktní formulář
+
+Formulář používá Netlify Forms bez externích klíčů nebo e-mailové aplikace. V **Project → Forms → Form detection** zapněte rozpoznávání formulářů a nasaďte tuto verzi webu. Potom v **Project → Forms → Submission notifications** přidejte e-mail pro upozornění. Netlify může vyžadovat potvrzení adresy, která není členem týmu. Odeslání otestujte na nasazeném webu a ověřte, že se poptávka objeví v přehledu **Forms** a přijde upozornění.
+
+Lokálně formulář záměrně nehlásí úspěch: běžný Next.js server neumí poptávku uložit do Netlify Forms.
 
 ## Před zveřejněním
 
@@ -49,7 +55,7 @@ Doménu je nutné nejprve vlastnit/registrovat. DNS záznamy se liší podle reg
 ## Struktura
 
 - `src/app/page.tsx` — obsah stránky a navigace.
-- `src/app/ContactForm.tsx` — kontaktní formulář, který předvyplní e-mailovou aplikaci.
+- `src/app/ContactForm.tsx` — přístupný formulář pro přímé odesílání poptávek přes Netlify Forms.
 - `src/app/sitemap.ts` — sitemap pro `mcab.dev`.
 - `netlify.toml` — build příkaz pro Netlify.
 - `public/_redirects` — přesměrování `www.mcab.dev` na primární doménu.
