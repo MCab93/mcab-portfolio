@@ -73,6 +73,20 @@ function CodeIcon() {
   );
 }
 
+function SearchIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 36 36" fill="none">
+      <circle cx="15.5" cy="15.5" r="9.5" stroke="currentColor" strokeWidth="2" />
+      <path
+        d="m22.5 22.5 8 8"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 function HeroArtwork() {
   return (
     <div className="hero-art" aria-hidden="true">
@@ -236,6 +250,13 @@ const services = [
       "Převedu návrh z Figmy do responzivního rozhraní, opravím konkrétní části webu nebo posílím váš vývojový tým.",
     icon: <CodeIcon />,
   },
+  {
+    number: "04",
+    title: "SEO a GEO optimalizace",
+    description:
+      "Vyladím technické základy, strukturovaná data a obsah, aby se ve vašem webu lépe orientovaly vyhledávače i AI asistenti.",
+    icon: <SearchIcon />,
+  },
 ];
 
 const collaborationSteps = [
@@ -253,26 +274,38 @@ export default function Home() {
       </a>
 
       <header className="site-header">
-        <a className="brand" href="#domu" aria-label="MCAB, Martin Cabalka">
+        <a className="brand" href="#domu" aria-label="MCAB — Web & Android Developer">
           <span className="brand-mark" aria-hidden="true">
-            MC
+            M/
           </span>
           <span className="brand-lockup">
             <strong>MCAB</strong>
-            <small>Martin Cabalka</small>
+            <small>WEB &amp; ANDROID DEVELOPER</small>
           </span>
         </a>
 
-        <nav className="main-nav" aria-label="Hlavní navigace">
-          <a href="#sluzby">Služby</a>
-          <a href="#o-mne">O mně</a>
-          <a href="#spoluprace">Jak spolupracuji</a>
-          <a href="#kontakt">Kontakt</a>
-        </nav>
-
-        <a className="header-cta" href="#kontakt">
-          Poptat projekt <ArrowIcon />
-        </a>
+        <details className="nav-menu">
+          <summary className="nav-trigger">
+            <span className="visually-hidden">Navigace</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M5 8h14M5 16h14"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              />
+            </svg>
+          </summary>
+          <nav className="main-nav" aria-label="Hlavní navigace">
+            <a href="#sluzby">Služby</a>
+            <a href="#o-mne">O mně</a>
+            <a href="#spoluprace">Jak spolupracuji</a>
+            <a href="#kontakt">Kontakt</a>
+            <a className="header-cta" href="#kontakt">
+              Poptat projekt <ArrowIcon />
+            </a>
+          </nav>
+        </details>
       </header>
 
       <main id="obsah">

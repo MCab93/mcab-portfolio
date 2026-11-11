@@ -144,7 +144,6 @@ export default function ContactForm() {
           {submission.status === "error" && submission.message}
         </p>
       </form>
-      <p className="form-note">Odesláním formuláře mi zašlete své kontaktní údaje a popis projektu.</p>
     </>
   );
 }
