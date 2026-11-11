@@ -276,42 +276,29 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#domu" aria-label="MCAB — Web & Android Developer">
           <span className="brand-mark" aria-hidden="true">
-            M/
+            MCAB_
           </span>
           <span className="brand-lockup">
-            <strong>MCAB</strong>
+            <strong>Martin Cabalka</strong>
             <small>WEB &amp; ANDROID DEVELOPER</small>
           </span>
         </a>
 
-        <details className="nav-menu">
-          <summary className="nav-trigger">
-            <span className="visually-hidden">Navigace</span>
-            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M5 8h14M5 16h14"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-              />
-            </svg>
-          </summary>
-          <nav className="main-nav" aria-label="Hlavní navigace">
-            <a href="#sluzby">Služby</a>
-            <a href="#o-mne">O mně</a>
-            <a href="#spoluprace">Jak spolupracuji</a>
-            <a href="#kontakt">Kontakt</a>
-            <a className="header-cta" href="#kontakt">
-              Poptat projekt <ArrowIcon />
-            </a>
-          </nav>
-        </details>
+        <nav className="main-nav" aria-label="Hlavní navigace">
+          <a href="#sluzby">Služby</a>
+          <a href="#o-mne">O mně</a>
+          <a href="#spoluprace">Jak spolupracuji</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <a className="header-cta" href="#kontakt">
+          Poptat projekt <ArrowIcon />
+        </a>
       </header>
 
       <main id="obsah">
         <section className="hero section-shell" id="domu" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">VÝVOJ WEBŮ A APLIKACÍ NA MÍRU</p>
             <h1 id="hero-title">Weby a aplikace, které dávají smysl.</h1>
             <p className="hero-description">
               Tvořím firemní weby, webové systémy a Android aplikace. Pomohu od zadání a návrhu
